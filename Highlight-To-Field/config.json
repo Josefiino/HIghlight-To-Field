@@ -1,0 +1,10 @@
+{
+	"field_1" : "Focus",
+    "shortcut_1" : "Ctrl+Shift+F1",
+    "field_2" : "Def Jp",
+    "shortcut_2" : "Ctrl+Shift+F2",
+    "field_3" : "Def En",
+    "shortcut_3" : "Ctrl+Shift+F3",
+    "field_4" : "PoS-Tags",
+    "shortcut_4" : "Ctrl+Shift+F4"
+}
