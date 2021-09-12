@@ -1,11 +1,10 @@
 # -*- coding: utf-8 -*-
+# This was heavily inspired by the lookup functions from the Japanese Support Addon at:
+# https://ankiweb.net/shared/info/3918629684
 
-import re
-from anki import collection
-from aqt import mw, gui_hooks
-from aqt.operations import CollectionOp
+from aqt import mw
 from aqt.qt import *
-from aqt.utils import shortcut, showInfo
+from aqt.utils import showInfo
 from aqt.main import ResetReason
 
 #Get the config setup
@@ -22,15 +21,7 @@ shortcut_4 = config['shortcut_4']
 # Class to cointain the functions
 class htf(object): # htf = highlight to field
     def __init__(self):
-        pass 
-
-    def dummy(self):
-        #showInfo("Dummy worked!")
-        notes = mw.reviewer.card.note
-        showInfo(f"field content = {notes[field_1]}")
-        # notes[field_1] += "CARALHO"
-        # notes.flush()
-        
+        pass       
 
     def get_highlight(self):
         selection = mw.web.selectedText()
@@ -52,9 +43,6 @@ class htf(object): # htf = highlight to field
             showInfo("No card is being reviewed")
             return     
         return note
-        # showInfo(f"noteid = {noteid}\n"
-        #          f"note = {note}\n"
-        #          f"focus note = {note['Focus']}")
 
     def update_field(self, field):  # Gets the highlighted text and updates the called 
                                     # field of the current note        
